@@ -14,9 +14,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const header = (
+    <header>
+      <div>
+        <h1>Osvaldo A' Blog </h1>
+      </div>
+    </header>
+  )
+
+  const footer = (
+    <footer>
+      <div>
+        <br />
+        <h3>Developed by oalvesxp</h3>
+      </div>
+    </footer>
+  )
+
   return (
     <html lang="pt">
-      <body>{children}</body>
+      <body>
+        {header}
+        {children}
+        {footer}
+      </body>
     </html>
   )
 }
