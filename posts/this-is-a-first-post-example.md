@@ -6,6 +6,8 @@ date: '2025-02-28'
 
 É claro que a hegemonia do ambiente político prepara-nos para enfrentar situações atípicas decorrentes dos relacionamentos verticais entre as hierarquias.
 
+![images/background](/images/background.png)
+
 No entanto, não podemos esquecer que o início da atividade geral de formação de atitudes maximiza as possibilidades por conta do retorno esperado a longo prazo.
 
 ## Primeiro Título
