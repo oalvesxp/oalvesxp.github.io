@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Isso é apenas um teste'
+title: 'Exemplo: Isso é apenas um teste 1'
 subtitle: 'Testando a transformação de arquivos Markdown em HTML/CSS'
 date: '2025-02-28'
 ---

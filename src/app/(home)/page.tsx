@@ -7,13 +7,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const { slugs } = getPostMetaData()
-  console.log(slugs)
+  const { posts } = getPostMetaData()
 
-  const postPreviews = slugs.map(item => (
-    <div key={1}>
-      <Link href={`/posts/${item}`}>
-        <h2>{item}</h2>
+  const postPreviews = posts.map(item => (
+    <div key={item.slug}>
+      <Link href={`/posts/${item.slug}`}>
+        <h2>{item.title}</h2>
       </Link>
     </div>
   ))

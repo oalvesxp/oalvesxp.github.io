@@ -18,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const isInMaintenanceMode = true
+  const isInMaintenanceMode = false
 
   return (
     <html lang="pt-BR">
