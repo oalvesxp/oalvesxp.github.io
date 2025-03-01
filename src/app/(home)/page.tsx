@@ -1,3 +1,4 @@
+import PostPreview from '@/components/post-preview'
 import { getPostMetaData } from '@/functions/get-post-meta-data'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -9,19 +10,11 @@ export const metadata: Metadata = {
 export default function Home() {
   const { posts } = getPostMetaData()
 
-  const postPreviews = posts.map(post => (
-    <div key={post.slug}>
-      <Link href={`/posts/${post.slug}`}>
-        <h2>{post.title}</h2>
-      </Link>
-      <p>{post.subtitle}</p>
-      <p>{post.date}</p>
-    </div>
-  ))
+  const post = posts.map(item => <PostPreview key={item.slug} {...item} />)
 
   return (
     <main>
-      <div>{postPreviews}</div>
+      <div>{post}</div>
     </main>
   )
 }
