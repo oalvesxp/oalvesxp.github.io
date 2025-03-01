@@ -1,5 +1,10 @@
 import { getPostContent } from '@/functions/get-post-content'
 import Markdown from 'markdown-to-jsx'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'post | Blog @oalvesxp',
+}
 
 interface PostPageProps {
   params: Promise<{
