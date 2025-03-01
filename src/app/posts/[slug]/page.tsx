@@ -20,13 +20,13 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = await params
-  const { content } = getPostContent({ slug })
+  const { post } = getPostContent({ slug })
 
   return (
     <>
       <div>
-        <h1>{slug}</h1>
-        <Markdown>{content}</Markdown>
+        <h1>{post.data.title}</h1>
+        <Markdown>{post.content}</Markdown>
       </div>
     </>
   )

@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import matter from 'gray-matter'
 
 interface GetPostContentProps {
   slug: string
@@ -7,9 +8,10 @@ interface GetPostContentProps {
 export function getPostContent(props: GetPostContentProps) {
   const folder = './posts/'
   const file = `${folder}${props.slug}.md`
-  const content = fs.readFileSync(file, 'utf-8')
+  const readResult = fs.readFileSync(file, 'utf-8')
+  const post = matter(readResult)
 
   return {
-    content,
+    post,
   }
 }
