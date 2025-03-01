@@ -1,7 +1,12 @@
 import fs from 'node:fs'
+import type { PostMetaData } from '@/@types/post-meta-dada'
 import matter from 'gray-matter'
 
-export function getPostMetaData() {
+interface GetPostMetaDataResponse {
+  posts: PostMetaData[]
+}
+
+export function getPostMetaData(): GetPostMetaDataResponse {
   const folder = './posts'
   const files = fs.readdirSync(folder)
   const markdownPosts = files.filter(item => item.endsWith('.md'))

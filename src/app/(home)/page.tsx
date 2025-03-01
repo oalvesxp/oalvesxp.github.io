@@ -9,11 +9,13 @@ export const metadata: Metadata = {
 export default function Home() {
   const { posts } = getPostMetaData()
 
-  const postPreviews = posts.map(item => (
-    <div key={item.slug}>
-      <Link href={`/posts/${item.slug}`}>
-        <h2>{item.title}</h2>
+  const postPreviews = posts.map(post => (
+    <div key={post.slug}>
+      <Link href={`/posts/${post.slug}`}>
+        <h2>{post.title}</h2>
       </Link>
+      <p>{post.subtitle}</p>
+      <p>{post.date}</p>
     </div>
   ))
 

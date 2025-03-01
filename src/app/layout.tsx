@@ -1,6 +1,6 @@
-import Footer from './components/footer'
-import Header from './components/header'
-import Maintenance from './components/maintenance'
+import Footer from '../components/footer'
+import Header from '../components/header'
+import Maintenance from '../components/maintenance'
 import './globals.css'
 import type { Metadata } from 'next'
 
