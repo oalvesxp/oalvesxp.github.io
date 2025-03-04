@@ -85,22 +85,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Versionamento de código! Fundamentos de Git & Github',
-    description: 'Isso é apenas um post de exemplo...',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Os 7 principios de um desenvolvedor ágil',
-    description: 'Isso é apenas um post de exemplo...',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'Estrutura de dados. Trabalhando com Arrays e listas',
-    description: 'Isso é apenas um post de exemplo...',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
+    title: 'Versionamento de código com Git & Github',
+    description: 'Tudo que é necessário saber para fazer o uso das ferramentas',
+    link: '/blog/versionamento-de-codigo-com-git-e-github',
+    uid: 'post1',
   },
 ]
 

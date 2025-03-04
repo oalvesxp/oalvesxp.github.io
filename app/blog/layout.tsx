@@ -1,4 +1,5 @@
 'use client'
+
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { TextMorph } from '@/components/ui/text-morph'
 import { useEffect, useState } from 'react'
@@ -17,12 +18,30 @@ function CopyButton() {
     }
   }, [text])
 
+  const handleCopy = () => {
+    try {
+      const textArea = document.createElement('textarea')
+      textArea.value = currentUrl
+
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textArea)
+
+      setText('Copied')
+    } catch (error) {
+      console.error('Erro ao copiar:', error)
+      alert('Não foi possível copiar. Tente manualmente.')
+    }
+  }
+
   return (
     <button
-      onClick={() => {
-        setText('Copied')
-        navigator.clipboard.writeText(currentUrl)
-      }}
+      // onClick={() => {
+      //   setText('Copied')
+      //   navigator.clipboard.writeText(currentUrl)
+      // }}
+      onClick={handleCopy}
       className="font-base flex items-center gap-1 text-center text-sm text-zinc-500 transition-colors dark:text-zinc-400"
       type="button"
     >
